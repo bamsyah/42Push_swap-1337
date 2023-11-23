@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 21:38:48 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/23 15:12:48 by bamsyah          ###   ########.fr       */
+/*   Updated: 2022/11/13 06:34:06 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

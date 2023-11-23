@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 17:04:00 by bamsyah           #+#    #+#             */
-/*   Updated: 2022/11/13 06:34:29 by bamsyah          ###   ########.fr       */
+/*   Created: 2022/11/04 22:47:32 by bamsyah           #+#    #+#             */
+/*   Updated: 2022/11/13 02:13:55 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	size_t	y;
-	char	*ptr;
+	size_t	i;
+	size_t	t;
+	char	*str;
 
 	i = 0;
-	y = ft_strlen(s1);
-	ptr = malloc((y + 1) * sizeof(char));
-	if (!ptr)
+	if (!s1)
 		return (NULL);
-	while (s1[i])
-	{
-		ptr[i] = s1[i];
+	t = ft_strlen(s1);
+	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+	while (t > i && ft_strchr(set, s1[t - 1]))
+		t--;
+	str = ft_substr(s1, i, (t - i));
+	return (str);
 }

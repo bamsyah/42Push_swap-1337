@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:20:29 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/23 15:20:35 by bamsyah          ###   ########.fr       */
+/*   Updated: 2022/11/13 06:34:40 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
 static int	word_count(const char *s, char c)
 {
