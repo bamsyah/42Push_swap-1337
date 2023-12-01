@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 16:11:17 by bamsyah           #+#    #+#             */
-/*   Updated: 2022/11/13 06:35:22 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/01 15:50:45 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "../push_swap.h"
+
+void	is_digit(char c)
+{
+	if (!(c >= '0' && c <= '9'))
+	{
+		ft_printf("Error\n");
+		exit (1);
+	}
+}
 
 int	ft_atoi(const char *str)
 {
@@ -28,10 +38,9 @@ int	ft_atoi(const char *str)
 		signe *= -1;
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i])
 	{
+		is_digit(str[i]);
 		x = x * 10 + (str[i] - '0');
 		i++;
 	}

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 18:42:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/01 15:31:22 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/12/01 16:20:57 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/12/01 16:32:43 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	void	*ptr;
+	int	value;
 
-	if (count != 0 && size > SIZE_MAX / count)
-		return (NULL);
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
+	value = pop(stack_b);
+	if (value == -1)
+		{
+			ft_printf("Error: stack_b undefined\n");
+			exit (1);
+		}
+	push_begin(stack_a, value);
 }

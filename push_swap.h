@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:21:04 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/23 19:05:36 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/01 19:32:25 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,27 @@
 typedef struct s_stack
 {
 	int	value;
-	struct t_stack *next;
+	struct s_stack *next;
 } t_stack ;
 
-//-----------------------------------
-void	parsing_swap(char *input);
-//-----------------------------------
+//---------------------Rules----------------------
+void	push_end(t_stack **stack, int value);
+void	push_begin(t_stack **stack, int value);
+int		pop(t_stack **stack);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void	pb(t_stack **stack_a, t_stack **stack_b);
+void	swap_stack(t_stack **stack);
+void	sa(t_stack **stack_a);
+void	sb(t_stack **stack_b);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+void	rotate_stack(t_stack **stack);
+void	ra(t_stack **stack_a);
+void	rb(t_stack **stack_b);
+void	rr(t_stack **stack_a, t_stack **stack_b);
+void	rev_rotate_stack(t_stack **stack);
+void	rra(t_stack **stack_a);
+void	rrb(t_stack **stack_b);
+void	rrr(t_stack **stack_a, t_stack **stack_b);
+void	check_dup(t_stack *stack, int value);
+//---------------------Rules----------------------
 #endif

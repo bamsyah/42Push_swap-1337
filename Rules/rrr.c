@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing_swap.c                                     :+:      :+:    :+:   */
+/*   rrr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 18:42:27 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/23 19:46:57 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/12/01 19:18:08 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/12/01 19:19:13 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	parsing_swap(char *input)
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	int	i;
-
-	i = 0;
-	while (input[i])
-	{
-		if (input[i] == ' ' || input[i] == '\t')
-			i++;
-		if ()
-		{
-			ft_printf("Wrong input");
-			exit(0);
-		}
-	}
+	rev_rotate_stack(stack_a);
+	rev_rotate_stack(stack_b);
 }
