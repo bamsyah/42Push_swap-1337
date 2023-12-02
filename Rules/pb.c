@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:30:22 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/01 16:32:45 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/02 12:54:55 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 			exit (1);
 		}
 	push_begin(stack_b, value);
+	write(1, "pb\n", 3);
 }

@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   ft_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 17:50:33 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/02 12:55:16 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/12/02 13:01:21 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/12/02 13:17:05 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(t_stack **stack_a)
+int	ft_sorted(t_stack **stack)
 {
-	swap_stack(stack_a);
-	write(1, "sa\n", 3);
+	t_stack	*temp;
+	
+	temp = *stack;
+	while (temp && temp->next)
+	{
+		if (temp->value > temp->next->value)
+			return (1);
+		temp = temp->next;
+	}
+	return (0);
 }

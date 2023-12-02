@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 18:20:17 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/01 19:17:44 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/02 14:31:49 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate_stack(stack_a);
 	rotate_stack(stack_b);
+	write(1, "rr\n", 1);
 }

@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 17:50:33 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/02 12:55:16 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/12/02 14:07:49 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/12/02 14:11:32 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(t_stack **stack_a)
+int	ft_min(t_stack *stack)
 {
-	swap_stack(stack_a);
-	write(1, "sa\n", 3);
+	int	min;
+
+	min = stack->value;
+	while (stack)
+	{
+		if (stack->value < min)
+			min = stack->value;
+		stack = stack->next;
+	}
+	return (min);
 }

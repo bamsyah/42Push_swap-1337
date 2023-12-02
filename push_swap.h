@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:21:04 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/01 19:32:25 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/02 14:35:01 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,18 @@ void	rra(t_stack **stack_a);
 void	rrb(t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 void	check_dup(t_stack *stack, int value);
+void	free_list(t_stack **stack);
 //---------------------Rules----------------------
+
+//---------------------Utils----------------------
+int		ft_sorted(t_stack **stack);
+int		ft_sizeliste(t_stack **stack);
+t_stack	ft_lastnode(t_stack **stack);
+int		ft_min(t_stack *stack);
+//---------------------Utils----------------------
+//---------------------Algorithm----------------------
+void	algorithm(t_stack **stack_a, t_stack **stack_b);
+void	sort_3(t_stack **stack_a);
+void	sort_5(t_stack **stack_a, t_stack **stack_b);
+//---------------------Algorithm----------------------
 #endif

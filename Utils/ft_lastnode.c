@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   ft_lastnode.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 17:50:33 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/02 12:55:16 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/12/02 13:24:36 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/12/02 13:38:43 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(t_stack **stack_a)
+t_stack	ft_lastnode(t_stack **stack)
 {
-	swap_stack(stack_a);
-	write(1, "sa\n", 3);
+	t_stack	*temp;
+	t_stack	*last;
+
+	temp = *stack;
+	while (temp->next)
+		temp = temp->next;
+	last = temp;
+	return (*last);
 }
