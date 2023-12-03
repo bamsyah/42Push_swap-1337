@@ -6,7 +6,7 @@
 #    By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 18:20:16 by bamsyah           #+#    #+#              #
-#    Updated: 2023/12/02 14:08:58 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/12/03 16:31:48 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,9 @@ SRC = Utils/ft_atoi.c Utils/ft_itoa.c  Utils/ft_putstr_fd.c  Utils/ft_split.c \
 	Rules/sb.c Rules/ss.c Rules/push.c Rules/rra.c Rules/rrb.c Rules/rrr.c \
 	Rules/rr.c Rules/ra.c Rules/rb.c Utils/ft_sorted.c Utils/ft_sizeliste.c \
 	Algorithm/algorithm.c Utils/ft_lastnode.c Algorithm/sort_3.c Algorithm/sort_5.c \
-	Utils/ft_min.c
+	Utils/ft_min.c Algorithm/sort_up_5.c Algorithm/sorted_push_b.c Utils/ft_find_max.c \
+	Algorithm/place_max_in_top.c Utils/ft_push_tab.c
+	
 
 OBJ = $(SRC:.c=.o)
 

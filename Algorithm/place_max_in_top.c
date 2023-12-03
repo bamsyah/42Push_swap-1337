@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm.c                                        :+:      :+:    :+:   */
+/*   place_max_in_top.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 12:59:07 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 15:17:19 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/12/03 16:13:37 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/12/03 16:25:50 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	algorithm(t_stack **stack_a, t_stack **stack_b)
+void	place_max_in_top(t_stack **stack_b)
 {
+	int	max_value;
 	int	size;
 
-	(void)stack_b;
-	size = ft_sizeliste(stack_a);
-	if (!ft_sorted(stack_a))
-		return ;
-	if (size <= 3)
-		sort_3(stack_a);
-	else if (size <= 5)
-		sort_5(stack_a, stack_b);
-	else if (size <= 100)
-		sort_up_5(stack_a, stack_b, 13);
+	while (1)
+	{
+		max_value = ft_find_max(*stack_b);
+		size = ft_sizeliste(stack_b);
+		if (max_value == 0)
+			break;
+		if (max_value > size / 2)
+			rrb(stack_b);
+		else if (max_value <= size / 2)
+			rb(stack_b);
+	}
 }
