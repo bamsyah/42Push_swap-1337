@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 13:33:36 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/02 14:26:00 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 14:06:43 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	move_to_b(t_stack **stack_a, t_stack **stack_b)
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
 {
 	int	min;
-	
+
 	move_to_b(stack_a, stack_b);
 	sort_3(stack_a);
 	while (*stack_b)

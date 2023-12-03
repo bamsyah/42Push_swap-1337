@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 18:22:57 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/01 19:29:40 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 14:02:38 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	push_begin(t_stack **stack, int value)
 	t_stack	*new_node;
 
 	new_node = malloc(sizeof(t_stack));
-	if(!new_node)
+	if (!new_node)
 		exit(1);
 	new_node->value = value;
 	new_node->next = *stack;
@@ -47,8 +47,8 @@ void	push_begin(t_stack **stack, int value)
 
 int	pop(t_stack **stack)
 {
-	t_stack *temp;
-	t_stack *head;
+	t_stack	*temp;
+	t_stack	*head;
 	int		value;
 
 	head = *stack;

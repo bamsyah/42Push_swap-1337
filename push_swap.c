@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:32:27 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/02 14:36:45 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 13:59:01 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	print_list(t_stack *list)
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_b;
 	int		loop;
 	int		check;
 

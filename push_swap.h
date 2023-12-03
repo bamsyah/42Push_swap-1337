@@ -6,12 +6,12 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:21:04 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/02 14:35:01 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 13:58:41 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -22,9 +22,9 @@
 
 typedef struct s_stack
 {
-	int	value;
-	struct s_stack *next;
-} t_stack ;
+	int				value;
+	struct s_stack	*next;
+}	t_stack;
 
 //---------------------Rules----------------------
 void	push_end(t_stack **stack, int value);
