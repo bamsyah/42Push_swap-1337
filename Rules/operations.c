@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 14:08:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 19:27:12 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 20:50:29 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ void	swap_stack(t_stack **stack)
 	t_stack	*second;
 
 	if (!(*stack) || !(*stack)->next)
-	{
-		ft_printf("Error: missing element\n");
 		return ;
-	}
 	first = *stack;
 	second = (*stack)->next;
 	first->next = second->next;
@@ -35,10 +32,7 @@ void	rotate_stack(t_stack **stack)
 	t_stack	*last;
 
 	if (!(*stack) || !(*stack)->next)
-	{
-		ft_printf("Error: missing element\n");
 		return ;
-	}
 	first = *stack;
 	last = *stack;
 	while (last->next)
@@ -55,10 +49,7 @@ void	rev_rotate_stack(t_stack **stack)
 	t_stack	*head;
 
 	if (!(*stack) || !(*stack)->next)
-	{
-		ft_printf("Error: missing element\n");
 		return ;
-	}
 	first = *stack;
 	last = *stack;
 	while (last->next->next)

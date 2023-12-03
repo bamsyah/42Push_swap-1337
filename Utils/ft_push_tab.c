@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 15:18:44 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 19:30:57 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 20:36:08 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ int	*sort_tab(int *tab, int size)
 	return (tab);
 }
 
-int *push_tab(t_stack *stack_a)
+int	*push_tab(t_stack *stack_a)
 {
-    int *tab;
-    int size;
-    int	loop;
+	int	*tab;
+	int	size;
+	int	loop;
 
 	loop = 0;
 	size = ft_sizeliste(stack_a);
