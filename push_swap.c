@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:32:27 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 13:59:01 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 19:47:10 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ int	main(int ac, char **av)
 		check_dup(stack_a, check);
 		push_end(&stack_a, ft_atoi(av[loop]));
 	}
-	print_list(stack_a);
+	// print_list(stack_a);
 	algorithm(&stack_a, &stack_b);
-	print_list(stack_a);
+	// print_list(stack_a);
 	free_list(&stack_a);
 	return (0);
 }

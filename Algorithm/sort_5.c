@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 13:33:36 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 14:06:43 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 19:30:52 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	move_to_b(t_stack **stack_a, t_stack **stack_b)
 {
 	int	min;
 
-	while (ft_sizeliste(stack_a) > 3)
+	while (ft_sizeliste(*stack_a) > 3)
 	{
 		min = ft_min(*stack_a);
 		if ((*stack_a)->value == min)

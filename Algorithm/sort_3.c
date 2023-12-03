@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 13:22:33 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 14:06:28 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 19:30:47 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	sort_3(t_stack **stack_a)
 	beging = (*stack_a)->value;
 	middle = (*stack_a)->next->value;
 	last = ft_lastnode(stack_a).value;
-	if (ft_sizeliste(stack_a) == 2 && (beging > last))
+	if (ft_sizeliste(*stack_a) == 2 && (beging > last))
 		sa(stack_a);
 	else if (beging > middle && middle > last)
 	{

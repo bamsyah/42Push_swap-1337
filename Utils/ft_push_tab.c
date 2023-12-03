@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 15:18:44 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 16:37:15 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 19:30:57 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int *push_tab(t_stack *stack_a)
     int	loop;
 
 	loop = 0;
-	size = ft_sizeliste(&stack_a);
+	size = ft_sizeliste(stack_a);
 	tab = malloc(sizeof(int) * size);
 	while (stack_a)
 	{

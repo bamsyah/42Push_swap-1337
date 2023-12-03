@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:17:57 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 16:22:16 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 19:41:01 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int ft_find_max(t_stack *stack)
     
     loop = 0;
     max_index = 0;
+    max_value = stack->value;
     while (stack)
     {
         if (max_value < stack->value)

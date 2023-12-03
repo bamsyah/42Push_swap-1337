@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:21:04 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 16:26:08 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/03 19:28:54 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	free_list(t_stack **stack);
 
 //---------------------Utils----------------------
 int		ft_sorted(t_stack **stack);
-int		ft_sizeliste(t_stack **stack);
+int		ft_sizeliste(t_stack *stack);
 t_stack	ft_lastnode(t_stack **stack);
 int		ft_min(t_stack *stack);
 int		*push_tab(t_stack *stack_a);
@@ -64,4 +64,6 @@ void    sort_up_5(t_stack **stack_a, t_stack **stack_b, int chank);
 void    sorted_push_b(t_stack **stack_a, t_stack **stack_b, int *tab, int chank);
 void	place_max_in_top(t_stack **stack_b);
 //---------------------Algorithm----------------------
+
+void	print_list(t_stack *list);
 #endif
