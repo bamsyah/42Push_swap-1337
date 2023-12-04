@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 18:22:57 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 14:02:38 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/05 00:05:30 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	pop(t_stack **stack)
 
 	head = *stack;
 	if (!head)
-		return (-1);
+		exit (1);
 	temp = head;
 	value = temp->value;
 	*stack = head->next;

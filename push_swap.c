@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:32:27 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/04 16:15:34 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 23:47:31 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	print_list(t_stack *list)
 	curr = list;
 	while (curr)
 	{
-		printf("[%d]", curr->value);
+		ft_printf("[%d]", curr->value);
 		curr = curr->next;
 	}
-	printf("\n");
+	ft_printf("\n");
 }
 
 void	check_args(int ac, char **av, t_stack **stack_a)
