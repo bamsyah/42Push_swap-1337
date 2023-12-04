@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:00:15 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 20:43:16 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 19:04:39 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 void	sorted_push_b(t_stack **stack_a, t_stack **stack_b, int *tab, int chank)
 {
 	int	loop;
+	int	size;
 
 	loop = 0;
+	size = ft_sizeliste(*stack_a);
 	while (*stack_a)
 	{
 		if ((*stack_a)->value <= tab[loop])
@@ -25,7 +27,7 @@ void	sorted_push_b(t_stack **stack_a, t_stack **stack_b, int *tab, int chank)
 			rb(stack_b);
 			loop++;
 		}
-		else if ((*stack_a)->value > tab[loop]
+		else if ((chank + loop) < size && (*stack_a)->value > tab[loop]
 			&& (*stack_a)->value <= tab[chank + loop])
 		{
 			pb(stack_a, stack_b);
