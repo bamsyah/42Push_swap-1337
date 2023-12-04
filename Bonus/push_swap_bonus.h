@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 11:49:04 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/04 12:35:05 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 15:43:30 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <limits.h>
-# include "./Get-next-line/get_next_line.h"
+# include "./Get_next_line/get_next_line.h"
 # include "./ft_printf/ft_printf.h"
+# include "./Utils/libft.h"
 
 typedef struct s_stack
 {

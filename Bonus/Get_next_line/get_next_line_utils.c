@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:11:25 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/07/19 23:00:11 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 15:38:13 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strchr(char *rest)
+int	ft_strchr_g(char *rest)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_strchr(char *rest)
 	return (0);
 }
 
-char	*ft_strjoin(char *buffer, char *rest)
+char	*ft_strjoin_g(char *buffer, char *rest)
 {
 	char	*all;
 	int		i;
@@ -36,7 +36,7 @@ char	*ft_strjoin(char *buffer, char *rest)
 	y = 0;
 	if (!buffer)
 		return (NULL);
-	all = malloc(sizeof(char) * (ft_strlen(buffer) + ft_strlen(rest)) + 1);
+	all = malloc(sizeof(char) * (ft_strlen_g(buffer) + ft_strlen_g(rest)) + 1);
 	if (!all)
 		return (NULL);
 	while (rest && rest[i])
@@ -53,13 +53,13 @@ char	*ft_strjoin(char *buffer, char *rest)
 	return (all);
 }
 
-char	*ft_strdup(char *str)
+char	*ft_strdup_g(char *str)
 {
 	char	*sstr;
 	int		i;
 
 	i = 0;
-	sstr = malloc(sizeof(char) * ft_strlen(str) + 1);
+	sstr = malloc(sizeof(char) * ft_strlen_g(str) + 1);
 	if (!sstr)
 		return (NULL);
 	while (str[i])
@@ -71,7 +71,7 @@ char	*ft_strdup(char *str)
 	return (sstr);
 }
 
-int	ft_strlen(char *str)
+int	ft_strlen_g(char *str)
 {
 	int	i;
 

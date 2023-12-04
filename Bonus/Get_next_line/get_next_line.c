@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:14:14 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/07/19 23:33:43 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 15:52:43 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ char	*read_file(int fd, char *rest)
 	if (!buffer)
 		return (NULL);
 	if (!rest)
-		rest = ft_strdup("");
+		rest = ft_strdup_g("");
 	rread = 1;
-	while (!ft_strchr(rest) && rread != 0)
+	while (!ft_strchr_g(rest) && rread != 0)
 	{
 		rread = read(fd, buffer, BUFFER_SIZE);
 		if (rread == -1)
 			return (free(buffer), free(rest), NULL);
 		buffer[rread] = '\0';
-		rest = ft_strjoin(buffer, rest);
+		rest = ft_strjoin_g(buffer, rest);
 	}
 	return (free(buffer), rest);
 }
@@ -65,14 +65,14 @@ char	*ft_getrest(char *rest, char *line)
 	int		i;
 	int		j;
 
-	i = ft_strlen(line);
+	i = ft_strlen_g(line);
 	j = 0;
 	while (rest[i++])
 		j++;
 	rrest = malloc(sizeof(char) * (j + 1));
 	if (!rrest)
 		return (NULL);
-	i = ft_strlen(line);
+	i = ft_strlen_g(line);
 	j = 0;
 	while (rest[i])
 		rrest[j++] = rest[i++];

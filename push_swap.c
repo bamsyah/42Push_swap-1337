@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:32:27 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/04 13:28:51 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 16:15:34 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,18 @@ void	check_args(int ac, char **av, t_stack **stack_a)
 
 	loop = 0;
 	while (++loop < ac)
+	{
+		split = ft_split(av[loop], ' ');
+		count = 0;
+		while (count < ft_strlen_d(split))
 		{
-			split = ft_split(av[loop], ' ');
-			count = 0;
-			while (count < ft_strlen_d(split))
-			{
-				check = ft_atoi(split[count]);
-				check_dup(*stack_a, check);
-				push_end(stack_a, ft_atoi(split[count]));
-				count++;
-			}
-			free_split(split);
+			check = ft_atoi(split[count]);
+			check_dup(*stack_a, check);
+			push_end(stack_a, ft_atoi(split[count]));
+			count++;
 		}
+		free_split(split);
+	}
 }
 
 int	main(int ac, char **av)

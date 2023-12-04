@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:12:38 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/04 13:27:51 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 16:03:15 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ void	check_args(int ac, char **av, t_stack **stack_a)
 
 	loop = 0;
 	while (++loop < ac)
+	{
+		split = ft_split(av[loop], ' ');
+		count = 0;
+		while (count < ft_strlen_d(split))
 		{
-			split = ft_split(av[loop], ' ');
-			count = 0;
-			while (count < ft_strlen_d(split))
-			{
-				check = ft_atoi(split[count]);
-				check_dup(*stack_a, check);
-				push_end(stack_a, ft_atoi(split[count]));
-				count++;
-			}
-			free_split(split);
+			check = ft_atoi(split[count]);
+			check_dup(*stack_a, check);
+			push_end(stack_a, ft_atoi(split[count]));
+			count++;
 		}
+		free_split(split);
+	}
 }
 
 void	moves_checker(t_stack **stack_a, t_stack **stack_b, char *str)
@@ -70,7 +70,7 @@ void	moves_checker(t_stack **stack_a, t_stack **stack_b, char *str)
 	else if (!ft_strcmp(str, "rrr\n"))
 		rrr(stack_a, stack_b);
 	else
-		error();
+		ft_printf("Error\n");
 }
 
 void	read_input(t_stack **stack_a, t_stack **stack_b)
@@ -98,9 +98,8 @@ int	main(int ac, char **av)
 	if (ac >= 2)
 	{
 		check_args(ac, av, &stack_a);
-		algorithm(&stack_a, &stack_b);
 		read_input(&stack_a, &stack_b);
-		if (ft_sorted(stack_a) && stack_b == NULL)
+		if (!ft_sorted(&stack_a) && stack_b == NULL)
 			write(1, "OK\n", 3);
 		else
 			write(1, "KO\n", 3);
