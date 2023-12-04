@@ -6,7 +6,7 @@
 #    By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 18:20:16 by bamsyah           #+#    #+#              #
-#    Updated: 2023/12/04 12:35:34 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/12/04 13:22:26 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC = Utils/ft_atoi.c Utils/ft_itoa.c  Utils/ft_putstr_fd.c  Utils/ft_split.c \
 	Rules/rr.c Rules/ra.c Rules/rb.c Utils/ft_sorted.c Utils/ft_sizeliste.c \
 	Algorithm/algorithm.c Utils/ft_lastnode.c Algorithm/sort_3.c Algorithm/sort_5.c \
 	Utils/ft_min.c Algorithm/sort_up_5.c Algorithm/sorted_push_b.c Utils/ft_find_max.c \
-	Algorithm/place_max_in_top.c Utils/ft_push_tab.c
+	Algorithm/place_max_in_top.c Utils/ft_push_tab.c Utils/ft_strlen_d.c
 
 SRC_B = Bonus/Utils/ft_atoi.c Bonus/Utils/ft_itoa.c  Bonus/Utils/ft_putstr_fd.c  Bonus/Utils/ft_split.c \
 	Bonus/Utils/ft_strjoin.c Bonus/Utils/ft_strlen.c  Bonus/Utils/ft_strncmp.c  Bonus/Utils/ft_strtrim.c \
@@ -39,7 +39,7 @@ SRC_B = Bonus/Utils/ft_atoi.c Bonus/Utils/ft_itoa.c  Bonus/Utils/ft_putstr_fd.c 
 	Bonus/Rules/rr.c Bonus/Rules/ra.c Bonus/Rules/rb.c Bonus/Utils/ft_sorted.c Bonus/Utils/ft_sizeliste.c \
 	Bonus/Algorithm/algorithm.c Bonus/Utils/ft_lastnode.c Bonus/Algorithm/sort_3.c Bonus/Algorithm/sort_5.c \
 	Bonus/Utils/ft_min.c Bonus/Algorithm/sort_up_5.c Bonus/Algorithm/sorted_push_b.c Bonus/Utils/ft_find_max.c \
-	Bonus/Algorithm/place_max_in_top.c Bonus/Utils/ft_push_tab.c Bonus/Utils/ft_strcmp.c
+	Bonus/Algorithm/place_max_in_top.c Bonus/Utils/ft_push_tab.c Bonus/Utils/ft_strcmp.c Bonus/Utils/ft_strlen_d.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,23 +6,43 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:12:38 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/04 12:36:39 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/04 13:27:51 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-void	print_list(t_stack *list)
+void	free_split(char **str)
 {
-	t_stack	*curr;
+	int	loop;
 
-	curr = list;
-	while (curr)
-	{
-		printf("[%d]", curr->value);
-		curr = curr->next;
-	}
-	printf("\n");
+	loop = -1;
+	while (str[++loop])
+		free(str[loop]);
+	free(str);
+}
+
+void	check_args(int ac, char **av, t_stack **stack_a)
+{
+	char	**split;
+	int		loop;
+	int		check;
+	int		count;
+
+	loop = 0;
+	while (++loop < ac)
+		{
+			split = ft_split(av[loop], ' ');
+			count = 0;
+			while (count < ft_strlen_d(split))
+			{
+				check = ft_atoi(split[count]);
+				check_dup(*stack_a, check);
+				push_end(stack_a, ft_atoi(split[count]));
+				count++;
+			}
+			free_split(split);
+		}
 }
 
 void	moves_checker(t_stack **stack_a, t_stack **stack_b, char *str)
@@ -72,26 +92,19 @@ int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int		loop;
-	int		check;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (ac < 2)
-		exit(1);
-	loop = 0;
-	while (++loop < ac)
+	if (ac >= 2)
 	{
-		check = ft_atoi(av[loop]);
-		check_dup(stack_a, check);
-		push_end(&stack_a, ft_atoi(av[loop]));
+		check_args(ac, av, &stack_a);
+		algorithm(&stack_a, &stack_b);
+		read_input(&stack_a, &stack_b);
+		if (ft_sorted(stack_a) && stack_b == NULL)
+			write(1, "OK\n", 3);
+		else
+			write(1, "KO\n", 3);
+		free_list(&stack_a);
 	}
-	algorithm(&stack_a, &stack_b);
-	read_input(&stack_a, &stack_b);
-	if (ft_sorted(stack_a) && stack_b == NULL)
-		write(1, "OK\n", 3);
-	else
-		write(1, "KO\n", 3);
-	free_list(&stack_a);
 	return (0);
 }
