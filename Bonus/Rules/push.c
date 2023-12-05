@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 18:22:57 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/05 14:22:42 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/05 14:39:25 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	check_dup(t_stack *stack, int value)
 	{
 		if (head->value == value)
 		{
-			ft_putstr_fd("Error: Number Duplicated\n", 2);
+			ft_putstr_fd("Error\n", 2);
 			exit (1);
 		}
 		head = head->next;
