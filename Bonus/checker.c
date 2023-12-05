@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:12:38 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/05 14:08:51 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/05 14:19:56 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,5 @@ int	main(int ac, char **av)
 			write(1, "KO\n", 3);
 		free_list(&stack_a);
 	}
-	system("leaks checker");
 	return (0);
 }
