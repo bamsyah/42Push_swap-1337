@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:12:38 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/04 16:03:15 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/05 14:08:51 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	moves_checker(t_stack **stack_a, t_stack **stack_b, char *str)
 	else if (!ft_strcmp(str, "rrr\n"))
 		rrr(stack_a, stack_b);
 	else
-		ft_printf("Error\n");
+		ft_error();
 }
 
 void	read_input(t_stack **stack_a, t_stack **stack_b)
@@ -105,5 +105,6 @@ int	main(int ac, char **av)
 			write(1, "KO\n", 3);
 		free_list(&stack_a);
 	}
+	system("leaks checker");
 	return (0);
 }

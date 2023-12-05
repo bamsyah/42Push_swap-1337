@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:21:04 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/03 20:40:31 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/05 13:55:08 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ t_stack	ft_lastnode(t_stack **stack);
 int		ft_min(t_stack *stack);
 int		*push_tab(t_stack *stack_a);
 int		ft_find_max(t_stack *stack);
+void	ft_error(void);
 //---------------------Utils----------------------
 //---------------------Algorithm----------------------
 void	algorithm(t_stack **stack_a, t_stack **stack_b);

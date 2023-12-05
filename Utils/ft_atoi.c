@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 16:11:17 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/12/05 00:11:46 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/12/05 14:13:05 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,15 @@ static int	ft_isdigit(char c)
 static void	ft_isinrange(int result, char c, int sign)
 {
 	if (sign == 1)
+	{
 		if (result > (INT_MAX - (c - '0')) / 10)
-		{
-			ft_printf("Error\n");
-			exit (1);
-		}
+			ft_error();
+	}
 	if (sign == -1)
-		if (result > (2147483648 - (c - '0')) / 10)
-		{
-			ft_printf("Error\n");
-			exit (1);
-		}
+	{
+		if (sign == -1 && result > (2147483648 - (c - '0')) / 10)
+			ft_error();
+	}
 }
 
 int	ft_atoi(const char *str)
@@ -59,11 +57,11 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (str[i] == '-' || str[i] == '+')
-		exit (1);
+		ft_error();
 	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))
-			exit (1);
+			ft_error();
 		ft_isinrange(result, str[i], sign);
 		result = result * 10 + str[i++] - '0';
 	}

@@ -6,14 +6,14 @@
 #    By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 18:20:16 by bamsyah           #+#    #+#              #
-#    Updated: 2023/12/04 16:15:25 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/12/05 14:00:55 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 NAME_B = checker
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g3
 
 SRC = Utils/ft_atoi.c Utils/ft_itoa.c  Utils/ft_putstr_fd.c  Utils/ft_split.c \
 	Utils/ft_strjoin.c Utils/ft_strlen.c  Utils/ft_strncmp.c  Utils/ft_strtrim.c \
@@ -26,7 +26,7 @@ SRC = Utils/ft_atoi.c Utils/ft_itoa.c  Utils/ft_putstr_fd.c  Utils/ft_split.c \
 	Rules/rr.c Rules/ra.c Rules/rb.c Utils/ft_sorted.c Utils/ft_sizeliste.c \
 	Algorithm/algorithm.c Utils/ft_lastnode.c Algorithm/sort_3.c Algorithm/sort_5.c \
 	Utils/ft_min.c Algorithm/sort_up_5.c Algorithm/sorted_push_b.c Utils/ft_find_max.c \
-	Algorithm/place_max_in_top.c Utils/ft_push_tab.c Utils/ft_strlen_d.c
+	Algorithm/place_max_in_top.c Utils/ft_push_tab.c Utils/ft_strlen_d.c Utils/ft_error.c \
 
 SRC_B = Bonus/Utils/ft_atoi.c Bonus/Utils/ft_itoa.c  Bonus/Utils/ft_putstr_fd.c  Bonus/Utils/ft_split.c \
 	Bonus/Utils/ft_strjoin.c Bonus/Utils/ft_strlen.c  Bonus/Utils/ft_strncmp.c  Bonus/Utils/ft_strtrim.c \
@@ -40,7 +40,7 @@ SRC_B = Bonus/Utils/ft_atoi.c Bonus/Utils/ft_itoa.c  Bonus/Utils/ft_putstr_fd.c 
 	Bonus/Algorithm/algorithm.c Bonus/Utils/ft_lastnode.c Bonus/Algorithm/sort_3.c Bonus/Algorithm/sort_5.c \
 	Bonus/Utils/ft_min.c Bonus/Algorithm/sort_up_5.c Bonus/Algorithm/sorted_push_b.c Bonus/Utils/ft_find_max.c \
 	Bonus/Algorithm/place_max_in_top.c Bonus/Utils/ft_push_tab.c Bonus/Utils/ft_strcmp.c Bonus/Utils/ft_strlen_d.c \
-	Bonus/checker.c Bonus/Get_next_line/get_next_line.c Bonus/Get_next_line/get_next_line_utils.c
+	Bonus/checker.c Bonus/Get_next_line/get_next_line.c Bonus/Get_next_line/get_next_line_utils.c Bonus/Utils/ft_error.c
 
 OBJ = $(SRC:.c=.o)
 
